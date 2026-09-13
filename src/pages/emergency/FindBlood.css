@@ -1,0 +1,265 @@
+.find-blood-page {
+  min-height: 100vh;
+  background: #0b0f14;
+  color: white;
+}
+
+
+/* HEADER */
+
+.blood-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 22px 50px;
+
+  border-bottom: 1px solid #222b35;
+}
+
+.blood-logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.blood-logo span {
+  color: #e63946;
+}
+
+.blood-header > span {
+  color: #e63946;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  letter-spacing: 2px;
+}
+
+
+/* CONTENT */
+
+.find-blood-content {
+  max-width: 1000px;
+  margin: auto;
+
+  padding: 60px 30px;
+}
+
+.blood-label {
+  color: #e63946;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  letter-spacing: 2px;
+}
+
+.find-blood-content h1 {
+  font-size: 42px;
+  margin: 10px 0;
+}
+
+.blood-description {
+  color: #aeb7c4;
+
+  font-size: 17px;
+
+  margin-bottom: 30px;
+}
+
+
+/* FILTER */
+
+.blood-filter {
+  display: flex;
+  flex-direction: column;
+
+  width: 300px;
+
+  margin-bottom: 35px;
+}
+
+.blood-filter label {
+  margin-bottom: 8px;
+
+  font-weight: bold;
+}
+
+.blood-filter select {
+  padding: 14px;
+
+  background: #121820;
+
+  color: white;
+
+  border: 1px solid #303b48;
+
+  border-radius: 10px;
+
+  font-size: 15px;
+}
+
+.blood-filter select:focus {
+  outline: none;
+
+  border-color: #e63946;
+}
+
+
+/* BLOOD BANK CARDS */
+
+.blood-bank-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+.blood-bank-card {
+  display: grid;
+
+  grid-template-columns: 1fr auto auto auto;
+
+  align-items: center;
+
+  gap: 25px;
+
+  padding: 24px;
+
+  background: #121820;
+
+  border: 1px solid #27313d;
+
+  border-radius: 15px;
+}
+
+.blood-bank-info {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+}
+
+.blood-icon {
+  font-size: 30px;
+}
+
+.blood-bank-info h2 {
+  margin: 0 0 7px;
+
+  font-size: 20px;
+}
+
+.blood-bank-info p {
+  margin: 0;
+
+  color: #9da8b6;
+}
+
+
+/* BLOOD GROUP */
+
+.blood-group {
+  padding: 10px 14px;
+
+  background: #32161a;
+
+  color: #ff6873;
+
+  border: 1px solid #67252b;
+
+  border-radius: 8px;
+
+  font-weight: bold;
+}
+
+
+/* UNITS */
+
+.blood-units {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.blood-units strong {
+  font-size: 25px;
+
+  color: #62d391;
+}
+
+.blood-units span {
+  color: #9da8b6;
+
+  font-size: 12px;
+}
+
+
+/* BUTTON */
+
+.blood-bank-card button {
+  padding: 11px 18px;
+
+  background: transparent;
+
+  color: white;
+
+  border: 1px solid #3a4653;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+.blood-bank-card button:hover {
+  background: #e63946;
+
+  border-color: #e63946;
+}
+
+
+/* NO RESULTS */
+
+.blood-no-results {
+  text-align: center;
+
+  color: #9da8b6;
+
+  padding: 40px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+  .blood-header {
+    padding: 20px;
+  }
+
+  .find-blood-content {
+    padding: 40px 20px;
+  }
+
+  .find-blood-content h1 {
+    font-size: 32px;
+  }
+
+  .blood-filter {
+    width: 100%;
+  }
+
+  .blood-bank-card {
+    grid-template-columns: 1fr;
+  }
+
+  .blood-units {
+    align-items: flex-start;
+  }
+
+  .blood-bank-card button {
+    width: 100%;
+  }
+
+}

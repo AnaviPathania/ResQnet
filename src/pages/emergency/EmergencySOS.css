@@ -1,0 +1,217 @@
+.sos-page {
+  min-height: 100vh;
+  background: #0b0f14;
+  color: white;
+}
+
+
+/* HEADER */
+
+.sos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 22px 50px;
+
+  border-bottom: 1px solid #222b35;
+}
+
+.sos-logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.sos-logo span {
+  color: #e63946;
+}
+
+.sos-header > span {
+  color: #e63946;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  letter-spacing: 2px;
+}
+
+
+/* CONTENT */
+
+.sos-content {
+  max-width: 900px;
+  margin: auto;
+
+  padding: 60px 30px;
+}
+
+.sos-title {
+  margin-bottom: 35px;
+}
+
+.sos-title > p:first-child {
+  color: #e63946;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  letter-spacing: 2px;
+}
+
+.sos-title h1 {
+  font-size: 44px;
+
+  margin: 10px 0;
+}
+
+.sos-title h2 {
+  font-size: 20px;
+
+  font-weight: normal;
+
+  color: #d5dbe2;
+
+  margin-bottom: 15px;
+}
+
+.sos-title p:last-child {
+  color: #aeb7c4;
+
+  line-height: 1.6;
+}
+
+
+/* FORM CARD */
+
+.sos-card {
+  background: #121820;
+
+  border: 1px solid #27313d;
+
+  border-radius: 18px;
+
+  padding: 35px;
+}
+
+.sos-card label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-weight: bold;
+}
+
+.sos-card select,
+.sos-card textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  background: #0b0f14;
+
+  color: white;
+
+  border: 1px solid #303b48;
+
+  border-radius: 10px;
+
+  padding: 14px;
+
+  font-size: 15px;
+
+  margin-bottom: 25px;
+}
+
+.sos-card select:focus,
+.sos-card textarea:focus {
+  outline: none;
+
+  border-color: #e63946;
+}
+
+.sos-card textarea {
+  min-height: 120px;
+
+  resize: vertical;
+
+  font-family: inherit;
+}
+
+
+/* WARNING */
+
+.sos-warning {
+  background: #2a1719;
+
+  border: 1px solid #5d282d;
+
+  border-radius: 10px;
+
+  padding: 15px;
+
+  margin-bottom: 25px;
+}
+
+.sos-warning strong {
+  color: #ff6873;
+}
+
+.sos-warning p {
+  color: #c9aeb1;
+
+  margin: 7px 0 0;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* BUTTON */
+
+.send-sos-button {
+  width: 100%;
+
+  padding: 16px;
+
+  background: #e63946;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.send-sos-button:hover {
+  background: #ff4d5a;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+
+  .sos-header {
+    padding: 20px;
+  }
+
+  .sos-content {
+    padding: 40px 20px;
+  }
+
+  .sos-title h1 {
+    font-size: 34px;
+  }
+
+  .sos-card {
+    padding: 25px 20px;
+  }
+
+}

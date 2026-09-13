@@ -1,0 +1,206 @@
+.find-bed-page {
+  min-height: 100vh;
+  background: #0b0f14;
+  color: white;
+}
+
+
+/* HEADER */
+
+.resource-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 22px 50px;
+
+  border-bottom: 1px solid #222b35;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #e63946;
+}
+
+.resource-header > span {
+  color: #e63946;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  letter-spacing: 2px;
+}
+
+
+/* CONTENT */
+
+.find-bed-content {
+  max-width: 1000px;
+  margin: auto;
+
+  padding: 60px 30px;
+}
+
+.page-label {
+  color: #e63946;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  letter-spacing: 2px;
+}
+
+.find-bed-content h1 {
+  font-size: 42px;
+  margin: 10px 0;
+}
+
+.page-description {
+  color: #aeb7c4;
+
+  font-size: 17px;
+
+  margin-bottom: 30px;
+}
+
+
+/* SEARCH */
+
+.find-bed-content > input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 15px 18px;
+
+  background: #121820;
+
+  color: white;
+
+  border: 1px solid #303b48;
+  border-radius: 10px;
+
+  font-size: 15px;
+
+  margin-bottom: 30px;
+}
+
+.find-bed-content > input:focus {
+  outline: none;
+  border-color: #e63946;
+}
+
+
+/* HOSPITAL CARDS */
+
+.hospital-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+.hospital-card {
+  display: grid;
+
+  grid-template-columns: 1fr auto auto;
+
+  align-items: center;
+
+  gap: 25px;
+
+  padding: 24px;
+
+  background: #121820;
+
+  border: 1px solid #27313d;
+  border-radius: 15px;
+}
+
+.hospital-card h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.hospital-card p {
+  margin: 0;
+  color: #9da8b6;
+}
+
+.bed-count {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.bed-count strong {
+  font-size: 28px;
+  color: #62d391;
+}
+
+.bed-count span {
+  color: #9da8b6;
+  font-size: 12px;
+}
+
+.hospital-card button {
+  padding: 11px 18px;
+
+  background: transparent;
+
+  color: white;
+
+  border: 1px solid #3a4653;
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+.hospital-card button:hover {
+  background: #e63946;
+  border-color: #e63946;
+}
+
+.no-results {
+  text-align: center;
+
+  color: #9da8b6;
+
+  padding: 40px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+  .resource-header {
+    padding: 20px;
+  }
+
+  .find-bed-content {
+    padding: 40px 20px;
+  }
+
+  .find-bed-content h1 {
+    font-size: 32px;
+  }
+
+  .hospital-card {
+    grid-template-columns: 1fr;
+  }
+
+  .bed-count {
+    align-items: flex-start;
+  }
+
+  .hospital-card button {
+    width: 100%;
+  }
+
+}

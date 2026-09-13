@@ -1,0 +1,105 @@
+.location-page {
+  min-height: 100vh;
+  background: #0b0f14;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+}
+
+.location-card {
+  width: 100%;
+  max-width: 600px;
+
+  background: #121820;
+
+  border: 1px solid #27313d;
+  border-radius: 20px;
+
+  padding: 45px;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.small-heading {
+  color: #e63946;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.location-card h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.description {
+  color: #aeb7c4;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-section select {
+  padding: 14px;
+
+  margin-bottom: 22px;
+
+  border-radius: 10px;
+  border: 1px solid #303b48;
+
+  background: #0b0f14;
+  color: white;
+
+  font-size: 15px;
+}
+
+.continue-button {
+  width: 100%;
+
+  padding: 15px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #e63946;
+  color: white;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.continue-button:hover {
+  background: #ff4d5a;
+}
+
+@media (max-width: 600px) {
+
+  .location-page {
+    padding: 15px;
+  }
+
+  .location-card {
+    padding: 30px 20px;
+  }
+
+  .location-card h1 {
+    font-size: 30px;
+  }
+
+}

@@ -1,0 +1,43 @@
+.emergency-access {
+  min-height: 100vh;
+  background: #0b0f14;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 30px;
+}
+
+.emergency-access h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.emergency-access p {
+  font-size: 18px;
+  color: #b8c0cc;
+  margin-bottom: 35px;
+}
+
+.emergency-access button {
+  padding: 14px 40px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #e63946;
+  color: white;
+
+  font-size: 17px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.emergency-access button:hover {
+  background: #ff4d5a;
+}
