@@ -1,0 +1,142 @@
+.chain-page {
+  min-height: 100vh;
+  background: #0b0f14;
+  color: white;
+}
+
+.chain-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 50px;
+  border-bottom: 1px solid #222b35;
+}
+
+.chain-logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.chain-logo span {
+  color: #e63946;
+}
+
+.chain-header span {
+  color: #b8c0cc;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.chain-content {
+  max-width: 850px;
+  margin: auto;
+  padding: 60px 30px;
+}
+
+.chain-label {
+  color: #e63946;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.chain-content h1 {
+  font-size: 42px;
+  margin: 12px 0;
+}
+
+.chain-description {
+  color: #aeb7c4;
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.chain-card {
+  background: #121820;
+  border: 1px solid #27313d;
+  border-radius: 16px;
+  padding: 25px 30px;
+}
+
+.chain-step {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.step-number {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #e63946;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.chain-step h2 {
+  font-size: 19px;
+  margin: 0 0 5px;
+}
+
+.chain-step p {
+  color: #9da8b5;
+  margin: 0;
+}
+
+.step-status {
+  margin-left: auto;
+  color: #70d68c;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.chain-line {
+  height: 30px;
+  width: 2px;
+  background: #394552;
+  margin-left: 20px;
+}
+
+.track-button {
+  display: block;
+  margin: 35px auto 0;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 10px;
+  background: #e63946;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.track-button:hover {
+  background: #ff4d5a;
+}
+
+@media (max-width: 600px) {
+  .chain-header {
+    padding: 20px;
+  }
+
+  .chain-content {
+    padding: 40px 20px;
+  }
+
+  .chain-content h1 {
+    font-size: 32px;
+  }
+
+  .chain-card {
+    padding: 22px 18px;
+  }
+
+  .step-status {
+    font-size: 12px;
+  }
+}

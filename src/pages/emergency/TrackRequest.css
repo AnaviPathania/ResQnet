@@ -1,0 +1,164 @@
+.track-page {
+  min-height: 100vh;
+  background: #0b0f14;
+  color: white;
+}
+
+.track-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 50px;
+  border-bottom: 1px solid #222b35;
+}
+
+.track-logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.track-logo span {
+  color: #e63946;
+}
+
+.track-header span {
+  color: #b8c0cc;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.track-content {
+  max-width: 800px;
+  margin: auto;
+  padding: 60px 30px;
+}
+
+.track-label {
+  color: #e63946;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.track-content h1 {
+  font-size: 42px;
+  margin: 12px 0;
+}
+
+.track-description {
+  color: #aeb7c4;
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.request-id {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #121820;
+  border: 1px solid #27313d;
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin-bottom: 35px;
+}
+
+.request-id span {
+  color: #9da8b5;
+}
+
+.request-id strong {
+  color: white;
+  letter-spacing: 1px;
+}
+
+.timeline {
+  background: #121820;
+  border: 1px solid #27313d;
+  border-radius: 16px;
+  padding: 30px;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.timeline-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #303b48;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.timeline-item h2 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.timeline-item p {
+  margin: 0;
+  color: #8f9aa8;
+  line-height: 1.5;
+}
+
+.timeline-item.completed .timeline-circle {
+  background: #2e8b57;
+}
+
+.timeline-item.active .timeline-circle {
+  background: #e63946;
+}
+
+.timeline-item.active h2 {
+  color: #ff5b66;
+}
+
+.timeline-line {
+  height: 35px;
+  width: 2px;
+  background: #394552;
+  margin-left: 19px;
+}
+
+.dashboard-button {
+  display: block;
+  margin: 35px auto 0;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 10px;
+  background: #e63946;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dashboard-button:hover {
+  background: #ff4d5a;
+}
+
+@media (max-width: 600px) {
+  .track-header {
+    padding: 20px;
+  }
+
+  .track-content {
+    padding: 40px 20px;
+  }
+
+  .track-content h1 {
+    font-size: 32px;
+  }
+
+  .timeline {
+    padding: 22px;
+  }
+}
