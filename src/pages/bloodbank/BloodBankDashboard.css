@@ -1,0 +1,53 @@
+.bloodbank-dashboard {
+  padding: 16px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.bloodbank-dashboard input,
+.bloodbank-dashboard select {
+  padding: 8px;
+  margin: 0 8px 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Mobile-first: 1 column by default */
+.bank-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+}
+
+.bank-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-sizing: border-box; /* Box Model: padding/border stay inside the width */
+}
+
+.low-stock-tag {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  background: #fddede;
+  color: #b32020;
+  margin-left: 6px;
+}
+
+.bank-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+/* Wider screens: 2-column grid for bank list, side-by-side detail sections */
+@media (min-width: 768px) {
+  .bank-list { grid-template-columns: repeat(2, 1fr); }
+  .bank-details { flex-direction: row; flex-wrap: wrap; }
+  .bank-details > section { flex: 1; min-width: 250px; }
+}
