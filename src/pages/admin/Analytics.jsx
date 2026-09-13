@@ -17,7 +17,7 @@ function Analytics() {
   // Object.entries() turns { "O+": 1, "A-": 1 } into [["O+", 1], ["A-", 1]]
   // so we can .map() over it like a normal array.
   const entries = Object.entries(donorsByBloodGroup);
-  const maxCount = Math.max(...entries.map(([, count]) => count));
+  const maxCount = entries.length ? Math.max(...entries.map(([, count]) => count)) : 0;
 
   return (
     <div className="card">
