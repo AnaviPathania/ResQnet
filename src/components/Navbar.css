@@ -1,0 +1,180 @@
+/* =========================================================================
+   Navbar
+   Layout notes:
+   - .navbar__inner uses FLEXBOX because it's a single row of items
+     (brand | links | actions) that need to sit on one axis and space
+     apart — a textbook 1D layout problem, so Flexbox is the right tool
+     (not Grid, which we save for the Footer's genuine 2D layout).
+   - `position: sticky` sits between static and fixed: the header stays
+     visible while scrolling without being pulled out of normal document
+     flow the way `position: fixed` would.
+   ========================================================================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.navbar__inner {
+  position: relative; /* anchors the mobile dropdown panel below */
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-primary-dark);
+  flex-shrink: 0;
+}
+
+.navbar__brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 700;
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.navbar__link {
+  position: relative; /* lets the active underline below position itself
+                          relative to THIS link, not the whole page */
+  padding: var(--space-1) 0;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.navbar__link:hover {
+  color: var(--color-primary-dark);
+}
+
+/* Active-page styling driven by React Router's isActive callback */
+.navbar__link--active {
+  color: var(--color-primary-dark);
+}
+
+.navbar__link--active::after {
+  content: '';
+  position: absolute; /* positioned relative to .navbar__link above */
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background: var(--color-primary);
+  border-radius: 2px;
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.navbar__text-btn {
+  background: none;
+  border: none;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.navbar__text-btn:hover { color: var(--color-text); }
+
+.navbar__sos-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-emergency);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: var(--radius-md);
+  transition: background 0.15s ease;
+}
+
+.navbar__sos-btn:hover { background: var(--color-emergency-dark); }
+
+.navbar__sos-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.navbar__toggle {
+  display: none; /* revealed only on small screens, see media query below */
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  padding: var(--space-1);
+}
+
+.navbar__toggle span {
+  width: 22px;
+  height: 2px;
+  background: var(--color-text);
+  border-radius: 2px;
+}
+
+/* ---------------------------------------------------------------------
+   Responsive breakpoint. Below 768px the link row becomes a full-width
+   dropdown panel, and the hamburger toggle that controls it appears.
+   --------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .navbar__links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-2) var(--space-4) var(--space-4);
+  }
+
+  .navbar__links--open {
+    display: flex;
+  }
+
+  .navbar__links li {
+    width: 100%;
+    padding: var(--space-2) 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .navbar__toggle {
+    display: flex;
+  }
+
+  .navbar__text-btn {
+    display: none; /* login demo toggle stays desktop-only for simplicity;
+                       restricted links reappear here once toggled there */
+  }
+}

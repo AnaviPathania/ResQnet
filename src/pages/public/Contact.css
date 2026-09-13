@@ -1,0 +1,128 @@
+/* Container */
+.contact-container {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.contact-header {
+  text-align: center;
+  background-color: #f1f5f9;
+  padding: 30px 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.contact-header h1 {
+  color: #0f172a;
+  margin-bottom: 8px;
+  font-size: 2rem;
+}
+
+.contact-header p {
+  color: #475569;
+}
+
+/* Grid Layout */
+.contact-grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.contact-info, .contact-form {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* Contact Info Section */
+.contact-info h2 {
+  font-size: 1.25rem;
+  color: #1e293b;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 5px;
+}
+
+.contact-info p {
+  color: #334155;
+  line-height: 1.6;
+}
+
+.info-box {
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.emergency-box {
+  border-left: 4px solid #dc2626;
+  background-color: #fef2f2;
+}
+
+.emergency-box p {
+  color: #991b1b;
+  margin: 5px 0;
+}
+
+/* Form Section */
+.contact-form {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 25px;
+}
+
+.contact-form h2 {
+  font-size: 1.25rem;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: bold;
+  margin-top: 12px;
+  margin-bottom: 5px;
+  color: #334155;
+  font-size: 0.9rem;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.submit-btn:hover {
+  background-color: #1d4ed8;
+}

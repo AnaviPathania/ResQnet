@@ -1,0 +1,58 @@
+.ambulance-dashboard {
+  padding: 16px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.ambulance-dashboard input,
+.ambulance-dashboard select {
+  padding: 8px;
+  margin: 0 8px 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Mobile-first: 1 column by default */
+.fleet-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+}
+
+.fleet-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-sizing: border-box; /* Box Model: padding/border stay inside the width */
+}
+
+.fleet-card-selected {
+  border-color: #2563eb;
+  border-width: 2px;
+}
+
+.status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  margin: 8px 0;
+}
+.status-ok { background: #d4f7dc; color: #1a7a32; }
+.status-trip { background: #fff3cd; color: #8a6400; }
+.status-maintenance { background: #e2e3e5; color: #41464b; }
+
+.dispatch,
+.active-trip,
+.history {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+}
+
+/* Wider screens: 2-column grid for the fleet list */
+@media (min-width: 768px) {
+  .fleet-list { grid-template-columns: repeat(2, 1fr); }
+}
