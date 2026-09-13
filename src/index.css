@@ -109,3 +109,117 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+/* ---------- CSS3 fundamentals: Box Model ---------- */
+/* box-sizing: border-box makes width/height include padding+border,
+   which is much easier to reason about, so we apply it to everything. */
+* {
+  box-sizing: border-box;
+}
+
+/* ---------- Reusable card look (used by Card.jsx component) ---------- */
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.status-available { background-color: #2e7d32; }
+.status-low { background-color: #ef6c00; }
+.status-critical { background-color: #c62828; }
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #7a1f1f;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: #5c1717;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* ---------- Grid: used by dashboards for stat cards ---------- */
+.stat-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 column on mobile */
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* ---------- Responsive design: media queries ---------- */
+/* min-width: 600px -> this CSS only applies on screens 600px and WIDER */
+@media (min-width: 600px) {
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .stat-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
+  }
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.container {
+  width: 100%;
+  padding: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.navbar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (min-width: 600px) {
+  .navbar-links {
+    flex-direction: row;
+  }
+}
+
+.navbar-links a.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
