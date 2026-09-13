@@ -44,6 +44,9 @@ import DonorShortages from './pages/donor/Shortages';
 import DonorNotifications from './pages/donor/Notifications';
 import DonationDetail from './pages/donor/DonationDetail';
 
+// --- Protected Route (guards /admin/*) ---
+import ProtectedRoute from './components/ProtectedRoute';
+
 // --- MEMBER 2 PLACEHOLDER (Pending Branch Fix) ---
 const EmergencyPlaceholder = () => (
   <div style={{ padding: '3rem', textAlign: 'center' }}>
@@ -81,21 +84,32 @@ function App() {
           <Route path="/bloodbank/requests" element={<BloodRequests />} />
           <Route path="/bloodbank/donor-recall" element={<DonorRecall />} />
 
-          {/* Member 4 Admin Routes */}
-          <Route path="/admin" element={<AdminDashboard />} />
-          <Route path="/admin/analytics" element={<Analytics />} />
-          <Route path="/admin/map" element={<ResourceMap />} />
-          <Route path="/admin/shortages" element={<ShortagesAlerts />} />
+          {/* Member 4 Admin Routes (nested under AdminLayout, protected) */}
+          <Route
+            path="/admin"
+            element={
+              <ProtectedRoute>
+                <AdminLayout />
+              </ProtectedRoute>
+            }
+          >
+            <Route index element={<AdminDashboard />} />
+            <Route path="analytics" element={<Analytics />} />
+            <Route path="map" element={<ResourceMap />} />
+            <Route path="alerts" element={<ShortagesAlerts />} />
+          </Route>
 
-          {/* Member 4 Donor Routes */}
-          <Route path="/donor" element={<DonorDashboard />} />
-          <Route path="/donor/profile" element={<DonorProfile />} />
-          <Route path="/donor/impact" element={<DonorImpact />} />
-          <Route path="/donor/history" element={<DonationHistory />} />
-          <Route path="/donor/eligibility" element={<Eligibility />} />
-          <Route path="/donor/shortages" element={<DonorShortages />} />
-          <Route path="/donor/notifications" element={<DonorNotifications />} />
-          <Route path="/donor/detail" element={<DonationDetail />} />
+          {/* Member 4 Donor Routes (nested under DonorLayout) */}
+          <Route path="/donor" element={<DonorLayout />}>
+            <Route index element={<DonorDashboard />} />
+            <Route path="profile" element={<DonorProfile />} />
+            <Route path="impact" element={<DonorImpact />} />
+            <Route path="history" element={<DonationHistory />} />
+            <Route path="history/:id" element={<DonationDetail />} />
+            <Route path="eligibility" element={<Eligibility />} />
+            <Route path="shortages" element={<DonorShortages />} />
+            <Route path="notifications" element={<DonorNotifications />} />
+          </Route>
 
           {/* Member 2 Temporary Route */}
           <Route path="/emergency/*" element={<EmergencyPlaceholder />} />

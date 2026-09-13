@@ -76,3 +76,37 @@ button { font-family: inherit; cursor: pointer; }
     transition-duration: 0.01ms !important;
   }
 }
+.navbar-links {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.navbar-links a {
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.navbar-links a.active {
+  color: var(--color-primary);
+  background: var(--color-bg);
+}
+.sub-navbar-links {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.sub-navbar-links a {
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.sub-navbar-links a.active {
+  color: var(--color-primary);
+  background: var(--color-bg);
+}

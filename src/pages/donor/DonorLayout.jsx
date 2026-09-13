@@ -11,7 +11,7 @@ function DonorLayout() {
       <h1>Donor Section</h1>
 
       {/* NavLink automatically adds an "active" class to the current page's link */}
-      <nav className="navbar-links" style={{ margin: "1rem 0", flexWrap: "wrap" }}>
+      <nav className="sub-navbar-links" style={{ margin: "1rem 0", flexWrap: "wrap" }}>
         <NavLink to="/donor" end>Dashboard</NavLink>
         <NavLink to="/donor/profile">Profile</NavLink>
         <NavLink to="/donor/eligibility">Eligibility</NavLink>
