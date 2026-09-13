@@ -1,225 +1,78 @@
+/* =========================================================================
+   ResQnet — Global theme
+   Central place for CSS variables (custom properties) so every component
+   shares one consistent palette / spacing scale instead of re-declaring
+   colours locally. Component-specific styles live in their OWN .css file
+   (Navbar.css, Footer.css, ...) and simply reference these variables —
+   this is what "CSS variables" from the syllabus is really for: a single
+   source of truth you can change in one place.
+   ========================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  /* Colour palette ----------------------------------------------------- */
+  --color-bg: #F6F8F9;
+  --color-surface: #FFFFFF;
+  --color-text: #16232C;
+  --color-text-muted: #5B6B76;
+  --color-border: #E1E7EA;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  --color-primary: #0F5C5C;      /* deep teal — trust / clinical calm     */
+  --color-primary-dark: #0A4040;
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --color-emergency: #D7263D;    /* used sparingly: SOS + urgent states   */
+  --color-emergency-dark: #B01F32;
 
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
+  --color-accent: #F2A93B;       /* warm amber — alerts / highlights      */
+  --color-success: #2E8B57;      /* "available" / "online" states         */
+
+  /* Typography ---------------------------------------------------------- */
+  --font-display: 'Space Grotesk', sans-serif; /* headings, brand, nav    */
+  --font-body: 'Inter', system-ui, sans-serif; /* paragraphs, body copy   */
+
+  /* Spacing scale — used instead of magic numbers everywhere ------------ */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2.5rem;
+  --space-6: 4rem;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+
+  --container-width: 1140px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
-}
+/* Reset ------------------------------------------------------------------ */
+*, *::before, *::after { box-sizing: border-box; }
 
 body {
   margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  margin: 0 0 var(--space-3);
+  line-height: 1.2;
 }
 
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
-}
+a { color: inherit; text-decoration: none; }
 
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
+ul { list-style: none; margin: 0; padding: 0; }
+
+button { font-family: inherit; cursor: pointer; }
+
+/* Respect visitors who've asked their OS for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
-}
-
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
-}
-
-/* ---------- CSS3 fundamentals: Box Model ---------- */
-/* box-sizing: border-box makes width/height include padding+border,
-   which is much easier to reason about, so we apply it to everything. */
-* {
-  box-sizing: border-box;
-}
-
-/* ---------- Reusable card look (used by Card.jsx component) ---------- */
-.card {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 1rem;
-}
-
-.status-badge {
-  display: inline-block;
-  padding: 0.2rem 0.6rem;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  color: white;
-}
-
-.status-available { background-color: #2e7d32; }
-.status-low { background-color: #ef6c00; }
-.status-critical { background-color: #c62828; }
-
-.btn {
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 6px;
-  background-color: #7a1f1f;
-  color: white;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.btn:hover {
-  background-color: #5c1717;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  margin-bottom: 1rem;
-}
-
-.form-group input,
-.form-group select {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-/* ---------- Grid: used by dashboards for stat cards ---------- */
-.stat-grid {
-  display: grid;
-  grid-template-columns: 1fr; /* 1 column on mobile */
-  gap: 1rem;
-  margin: 1rem 0;
-}
-
-.card-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-}
-
-/* ---------- Responsive design: media queries ---------- */
-/* min-width: 600px -> this CSS only applies on screens 600px and WIDER */
-@media (min-width: 600px) {
-  .stat-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
-  }
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 900px) {
-  .stat-grid {
-    grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
-  }
-  .card-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-.container {
-  width: 100%;
-  padding: 1rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.navbar-links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-@media (min-width: 600px) {
-  .navbar-links {
-    flex-direction: row;
-  }
-}
-
-.navbar-links a.active {
-  text-decoration: underline;
-  font-weight: bold;
 }
