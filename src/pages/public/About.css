@@ -1,0 +1,83 @@
+/* Main Layout */
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* About Hero Header */
+.about-hero {
+  text-align: center;
+  background-color: #f1f5f9;
+  padding: 30px 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.about-hero h1 {
+  color: #0f172a;
+  margin-bottom: 8px;
+  font-size: 2rem;
+}
+
+.about-hero p {
+  color: #475569;
+  font-size: 1rem;
+}
+
+/* Text Sections */
+.about-section {
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.about-section h2 {
+  color: #1e293b;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 6px;
+}
+
+.about-section p {
+  color: #334155;
+}
+
+/* Stats Cards */
+.stats-section {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 200px;
+  background-color: #2563eb;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.stat-card h3 {
+  font-size: 2rem;
+  margin: 0 0 5px 0;
+}
+
+.stat-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #dbeafe;
+}
+
+/* Pillar List */
+.pillar-list {
+  padding-left: 20px;
+  color: #334155;
+}
+
+.pillar-list li {
+  margin-bottom: 10px;
+}

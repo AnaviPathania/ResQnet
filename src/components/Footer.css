@@ -1,0 +1,114 @@
+/* =========================================================================
+   Footer
+   Layout notes:
+   - .footer__grid uses CSS GRID because we need a genuine 2D layout — rows
+     AND columns need to line up together (three columns on desktop,
+     collapsing to one on mobile). Grid is the right tool here; Flexbox
+     would need extra wrapping tricks to get the same alignment.
+   - .footer__bottom stays FLEXBOX because it's just one row split into
+     two ends — a 1D problem again, same as the Navbar.
+   ========================================================================= */
+
+.footer {
+  background: var(--color-primary-dark);
+  color: #E7EEEE;
+  margin-top: var(--space-6);
+}
+
+.footer__grid {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4) var(--space-5);
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr; /* brand column gets more room */
+  gap: var(--space-5);
+}
+
+.footer__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 1.125rem;
+  color: #fff;
+}
+
+.footer__brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-sm);
+  background: var(--color-emergency);
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.footer__blurb {
+  color: #B7C6C6;
+  max-width: 34ch; /* keeps line length readable per typography guidance */
+}
+
+.footer__heading {
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+.footer__list li { margin-bottom: var(--space-2); }
+
+.footer__link { color: #B7C6C6; }
+.footer__link:hover { color: #fff; }
+
+.footer__helpline p {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin: 0 0 var(--space-2);
+  font-style: normal; /* <address> is italic by default — this is real UI copy */
+}
+
+.footer__service { color: #B7C6C6; }
+.footer__number { color: #fff; font-weight: 600; }
+
+.footer__status {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  font-size: 0.85rem;
+  color: #B7C6C6;
+}
+
+.footer__status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-text-muted);
+}
+
+.footer__status-dot--online {
+  background: var(--color-success);
+}
+
+.footer__status-time { color: #7E9191; }
+
+.footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  font-size: 0.8rem;
+  color: #7E9191;
+}
+
+@media (max-width: 768px) {
+  .footer__grid {
+    grid-template-columns: 1fr; /* single column stack on mobile */
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
