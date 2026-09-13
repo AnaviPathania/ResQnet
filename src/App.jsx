@@ -47,13 +47,21 @@ import DonationDetail from './pages/donor/DonationDetail';
 // --- Protected Route (guards /admin/*) ---
 import ProtectedRoute from './components/ProtectedRoute';
 
-// --- MEMBER 2 PLACEHOLDER (Pending Branch Fix) ---
-const EmergencyPlaceholder = () => (
-  <div style={{ padding: '3rem', textAlign: 'center' }}>
-    <h2>🚑 Emergency Module</h2>
-    <p>Member 2 work pending Git merge.</p>
-  </div>
-);
+// --- MEMBER 2 (Emergency Module) ---
+// pages/emergency/EmergencyAccess.jsx is a DIFFERENT component from
+// pages/public/EmergencyAccess.jsx (already imported above as EmergencyAccess).
+// Aliased to EmergencyGate to avoid a naming clash. Both are kept.
+import EmergencyGate from './pages/emergency/EmergencyAccess';
+import LocationSelection from './pages/emergency/LocationSelection';
+import EmergencyDashboard from './pages/emergency/EmergencyDashboard';
+import EmergencySOS from './pages/emergency/EmergencySOS';
+import FindBed from './pages/emergency/FindBed';
+import FindBlood from './pages/emergency/FindBlood';
+import FindAmbulance from './pages/emergency/FindAmbulance';
+import ResourceDetails from './pages/emergency/ResourceDetails';
+import Matching from './pages/emergency/Matching';
+import EmergencyChain from './pages/emergency/EmergencyChain';
+import TrackRequest from './pages/emergency/TrackRequest';
 
 function App() {
   return (
@@ -111,8 +119,18 @@ function App() {
             <Route path="notifications" element={<DonorNotifications />} />
           </Route>
 
-          {/* Member 2 Temporary Route */}
-          <Route path="/emergency/*" element={<EmergencyPlaceholder />} />
+                    {/* Member 2 Routes — Emergency module */}
+          <Route path="/emergency" element={<EmergencyGate />} />
+          <Route path="/emergency/location" element={<LocationSelection />} />
+          <Route path="/emergency/dashboard" element={<EmergencyDashboard />} />
+          <Route path="/emergency/sos" element={<EmergencySOS />} />
+          <Route path="/emergency/bed" element={<FindBed />} />
+          <Route path="/emergency/blood" element={<FindBlood />} />
+          <Route path="/emergency/ambulance" element={<FindAmbulance />} />
+          <Route path="/emergency/resource/:id" element={<ResourceDetails />} />
+          <Route path="/emergency/matching" element={<Matching />} />
+          <Route path="/emergency/chain" element={<EmergencyChain />} />
+          <Route path="/emergency/track" element={<TrackRequest />} />
 
           {/* Fallback Route */}
           <Route path="*" element={<NotFound />} />
