@@ -4,6 +4,7 @@
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Login.css";
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -23,11 +24,11 @@ function Login() {
   }
 
   return (
-    <div className="container">
-      <div className="card" style={{ maxWidth: "400px", margin: "2rem auto" }}>
+    <div className="login-page">
+      <div className="login-card">
         <h2>Admin Login (Demo)</h2>
         <form onSubmit={handleSubmit}>
-          <div className="form-group">
+          <div className="login-form-group">
             <label htmlFor="username">Username</label>
             <input
               id="username"
@@ -36,7 +37,7 @@ function Login() {
               placeholder="Enter any username"
             />
           </div>
-          <button className="btn" type="submit">Log In</button>
+          <button className="login-button" type="submit">Log In</button>
         </form>
       </div>
     </div>

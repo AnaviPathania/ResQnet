@@ -1,9 +1,8 @@
 .find-ambulance-page {
   min-height: 100vh;
-  background: #0b0f14;
-  color: white;
+  background: linear-gradient(135deg, #dbeafe 0%, #dcfce7 100%);
+  color: #0f172a;
 }
-
 
 /* HEADER */
 
@@ -14,7 +13,8 @@
 
   padding: 22px 50px;
 
-  border-bottom: 1px solid #222b35;
+  background: #ffffff;
+  border-bottom: 2px solid #bfdbfe;
 }
 
 .ambulance-logo {
@@ -23,18 +23,17 @@
 }
 
 .ambulance-logo span {
-  color: #e63946;
+  color: #ef4444;
 }
 
 .ambulance-header > span {
-  color: #e63946;
+  color: #ef4444;
 
   font-size: 13px;
   font-weight: bold;
 
   letter-spacing: 2px;
 }
-
 
 /* CONTENT */
 
@@ -46,7 +45,7 @@
 }
 
 .ambulance-label {
-  color: #e63946;
+  color: #ef4444;
 
   font-size: 13px;
   font-weight: bold;
@@ -58,16 +57,16 @@
   font-size: 42px;
 
   margin: 10px 0;
+  color: #0e7490;
 }
 
 .ambulance-description {
-  color: #aeb7c4;
+  color: #475569;
 
   font-size: 17px;
 
   margin-bottom: 30px;
 }
-
 
 /* SEARCH */
 
@@ -78,25 +77,25 @@
 
   padding: 15px 18px;
 
-  background: #121820;
+  background: #ffffff;
 
-  color: white;
+  color: #0f172a;
 
-  border: 1px solid #303b48;
+  border: 2px solid #93c5fd;
 
   border-radius: 10px;
 
   font-size: 15px;
 
   margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(14, 116, 144, 0.08);
 }
 
 .find-ambulance-content > input:focus {
   outline: none;
 
-  border-color: #e63946;
+  border-color: #ef4444;
 }
-
 
 /* AMBULANCE LIST */
 
@@ -118,11 +117,12 @@
 
   padding: 24px;
 
-  background: #121820;
+  background: #ffffff;
 
-  border: 1px solid #27313d;
+  border: 2px solid #bbf7d0;
 
   border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(14, 116, 144, 0.1);
 }
 
 .ambulance-info {
@@ -136,119 +136,3 @@
   font-size: 32px;
 }
 
-.ambulance-info h2 {
-  margin: 0 0 7px;
-
-  font-size: 20px;
-}
-
-.ambulance-info p {
-  margin: 0;
-
-  color: #9da8b6;
-}
-
-
-/* TYPE */
-
-.ambulance-type {
-  padding: 9px 12px;
-
-  background: #18202a;
-
-  border: 1px solid #303b48;
-
-  border-radius: 8px;
-
-  color: #c4ccd6;
-
-  font-size: 13px;
-}
-
-
-/* STATUS */
-
-.ambulance-status {
-  display: flex;
-  align-items: center;
-
-  gap: 7px;
-
-  color: #62d391;
-
-  font-size: 14px;
-
-  font-weight: bold;
-}
-
-.ambulance-status span {
-  width: 8px;
-  height: 8px;
-
-  background: #62d391;
-
-  border-radius: 50%;
-}
-
-
-/* BUTTON */
-
-.ambulance-card button {
-  padding: 11px 18px;
-
-  background: transparent;
-
-  color: white;
-
-  border: 1px solid #3a4653;
-
-  border-radius: 8px;
-
-  cursor: pointer;
-
-  font-weight: bold;
-}
-
-.ambulance-card button:hover {
-  background: #e63946;
-
-  border-color: #e63946;
-}
-
-
-/* NO RESULTS */
-
-.ambulance-no-results {
-  text-align: center;
-
-  color: #9da8b6;
-
-  padding: 40px;
-}
-
-
-/* RESPONSIVE */
-
-@media (max-width: 850px) {
-
-  .ambulance-header {
-    padding: 20px;
-  }
-
-  .find-ambulance-content {
-    padding: 40px 20px;
-  }
-
-  .find-ambulance-content h1 {
-    font-size: 32px;
-  }
-
-  .ambulance-card {
-    grid-template-columns: 1fr;
-  }
-
-  .ambulance-card button {
-    width: 100%;
-  }
-
-}

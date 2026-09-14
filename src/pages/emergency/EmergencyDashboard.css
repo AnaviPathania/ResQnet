@@ -1,9 +1,8 @@
 .dashboard-page {
   min-height: 100vh;
-  background: #0b0f14;
-  color: white;
+  background: linear-gradient(135deg, #dbeafe 0%, #dcfce7 100%);
+  color: #0f172a;
 }
-
 
 /* HEADER */
 
@@ -14,7 +13,8 @@
 
   padding: 22px 50px;
 
-  border-bottom: 1px solid #222b35;
+  background: #ffffff;
+  border-bottom: 2px solid #bfdbfe;
 }
 
 .logo {
@@ -23,14 +23,13 @@
 }
 
 .logo span {
-  color: #e63946;
+  color: #ef4444;
 }
 
 .location-display {
-  color: #b8c0cc;
+  color: #475569;
   font-size: 14px;
 }
-
 
 /* MAIN CONTENT */
 
@@ -41,7 +40,6 @@
   padding: 60px 30px;
 }
 
-
 /* HERO */
 
 .dashboard-hero {
@@ -49,7 +47,7 @@
 }
 
 .dashboard-label {
-  color: #e63946;
+  color: #ef4444;
 
   font-size: 13px;
   font-weight: bold;
@@ -60,13 +58,13 @@
 .dashboard-hero h1 {
   font-size: 44px;
   margin: 12px 0;
+  color: #0e7490;
 }
 
 .dashboard-hero p {
-  color: #aeb7c4;
+  color: #475569;
   font-size: 17px;
 }
-
 
 /* SOS */
 
@@ -75,30 +73,32 @@
   justify-content: space-between;
   align-items: center;
 
-  background: #32161a;
+  background: #fef2f2;
 
-  border: 1px solid #67252b;
+  border: 2px solid #fca5a5;
   border-radius: 16px;
 
   padding: 25px 30px;
 
   margin-bottom: 50px;
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.1);
 }
 
 .sos-section h2 {
   margin: 0 0 8px;
+  color: #0f172a;
 }
 
 .sos-section p {
   margin: 0;
-  color: #c9aeb1;
+  color: #7f1d1d;
 }
 
 .sos-button {
-  background: #e63946;
+  background: #ef4444;
   color: white;
 
-  border: none;
+  border: 2px solid #dc2626;
   border-radius: 10px;
 
   padding: 14px 22px;
@@ -108,15 +108,15 @@
 }
 
 .sos-button:hover {
-  background: #ff4d5a;
+  background: #dc2626;
 }
-
 
 /* RESOURCES */
 
 .resources-section h2 {
   font-size: 28px;
   margin-bottom: 25px;
+  color: #0f172a;
 }
 
 .resource-grid {
@@ -128,19 +128,20 @@
 }
 
 .resource-card {
-  background: #121820;
+  background: #ffffff;
 
-  border: 1px solid #27313d;
+  border: 2px solid #bbf7d0;
   border-radius: 16px;
 
   padding: 28px;
 
+  box-shadow: 0 6px 18px rgba(14, 116, 144, 0.1);
   transition: 0.2s;
 }
 
 .resource-card:hover {
   transform: translateY(-4px);
-  border-color: #e63946;
+  border-color: #ef4444;
 }
 
 .resource-icon {
@@ -151,10 +152,11 @@
 .resource-card h3 {
   font-size: 21px;
   margin-bottom: 10px;
+  color: #0f172a;
 }
 
 .resource-card p {
-  color: #aeb7c4;
+  color: #475569;
 
   line-height: 1.5;
 
@@ -168,9 +170,9 @@
 
   background: transparent;
 
-  color: white;
+  color: #0f172a;
 
-  border: 1px solid #3a4653;
+  border: 2px solid #93c5fd;
   border-radius: 9px;
 
   cursor: pointer;
@@ -179,10 +181,10 @@
 }
 
 .resource-card button:hover {
-  background: #e63946;
-  border-color: #e63946;
+  background: #ef4444;
+  border-color: #ef4444;
+  color: white;
 }
-
 
 /* INFO */
 
@@ -191,22 +193,23 @@
 
   padding: 30px;
 
-  background: #121820;
+  background: #ffffff;
 
   border-radius: 16px;
 
-  border: 1px solid #27313d;
+  border: 2px solid #bfdbfe;
+  box-shadow: 0 6px 18px rgba(14, 116, 144, 0.1);
 }
 
 .dashboard-info h2 {
   margin-top: 0;
+  color: #0f172a;
 }
 
 .dashboard-info p {
-  color: #aeb7c4;
+  color: #475569;
   line-height: 1.7;
 }
-
 
 /* RESPONSIVE */
 

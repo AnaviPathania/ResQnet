@@ -1,7 +1,7 @@
 .emergency-access {
   min-height: 100vh;
-  background: #0b0f14;
-  color: white;
+  background: linear-gradient(135deg, #dbeafe 0%, #dcfce7 100%);
+  color: #0f172a;
 
   display: flex;
   flex-direction: column;
@@ -15,29 +15,31 @@
 .emergency-access h1 {
   font-size: 48px;
   margin-bottom: 15px;
+  color: #0e7490;
 }
 
 .emergency-access p {
   font-size: 18px;
-  color: #b8c0cc;
+  color: #475569;
   margin-bottom: 35px;
 }
 
 .emergency-access button {
   padding: 14px 40px;
 
-  border: none;
+  border: 2px solid #dc2626;
   border-radius: 10px;
 
-  background: #e63946;
+  background: #ef4444;
   color: white;
 
   font-size: 17px;
   font-weight: bold;
 
   cursor: pointer;
+  box-shadow: 0 8px 20px rgba(239, 68, 68, 0.3);
 }
 
 .emergency-access button:hover {
-  background: #ff4d5a;
+  background: #dc2626;
 }

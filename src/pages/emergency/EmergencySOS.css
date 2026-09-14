@@ -1,9 +1,8 @@
 .sos-page {
   min-height: 100vh;
-  background: #0b0f14;
-  color: white;
+  background: linear-gradient(135deg, #dbeafe 0%, #dcfce7 100%);
+  color: #0f172a;
 }
-
 
 /* HEADER */
 
@@ -14,7 +13,8 @@
 
   padding: 22px 50px;
 
-  border-bottom: 1px solid #222b35;
+  background: #ffffff;
+  border-bottom: 2px solid #bfdbfe;
 }
 
 .sos-logo {
@@ -23,18 +23,17 @@
 }
 
 .sos-logo span {
-  color: #e63946;
+  color: #ef4444;
 }
 
 .sos-header > span {
-  color: #e63946;
+  color: #ef4444;
 
   font-size: 13px;
   font-weight: bold;
 
   letter-spacing: 2px;
 }
-
 
 /* CONTENT */
 
@@ -50,7 +49,7 @@
 }
 
 .sos-title > p:first-child {
-  color: #e63946;
+  color: #ef4444;
 
   font-size: 13px;
   font-weight: bold;
@@ -62,6 +61,7 @@
   font-size: 44px;
 
   margin: 10px 0;
+  color: #0e7490;
 }
 
 .sos-title h2 {
@@ -69,28 +69,28 @@
 
   font-weight: normal;
 
-  color: #d5dbe2;
+  color: #334155;
 
   margin-bottom: 15px;
 }
 
 .sos-title p:last-child {
-  color: #aeb7c4;
+  color: #475569;
 
   line-height: 1.6;
 }
 
-
 /* FORM CARD */
 
 .sos-card {
-  background: #121820;
+  background: #ffffff;
 
-  border: 1px solid #27313d;
+  border: 2px solid #bfdbfe;
 
   border-radius: 18px;
 
   padding: 35px;
+  box-shadow: 0 8px 24px rgba(14, 116, 144, 0.1);
 }
 
 .sos-card label {
@@ -99,6 +99,7 @@
   margin-bottom: 8px;
 
   font-weight: bold;
+  color: #0f172a;
 }
 
 .sos-card select,
@@ -107,11 +108,11 @@
 
   box-sizing: border-box;
 
-  background: #0b0f14;
+  background: #f0f9ff;
 
-  color: white;
+  color: #0f172a;
 
-  border: 1px solid #303b48;
+  border: 2px solid #93c5fd;
 
   border-radius: 10px;
 
@@ -126,7 +127,7 @@
 .sos-card textarea:focus {
   outline: none;
 
-  border-color: #e63946;
+  border-color: #ef4444;
 }
 
 .sos-card textarea {
@@ -137,13 +138,12 @@
   font-family: inherit;
 }
 
-
 /* WARNING */
 
 .sos-warning {
-  background: #2a1719;
+  background: #fef2f2;
 
-  border: 1px solid #5d282d;
+  border: 2px solid #fca5a5;
 
   border-radius: 10px;
 
@@ -153,11 +153,11 @@
 }
 
 .sos-warning strong {
-  color: #ff6873;
+  color: #dc2626;
 }
 
 .sos-warning p {
-  color: #c9aeb1;
+  color: #7f1d1d;
 
   margin: 7px 0 0;
 
@@ -166,7 +166,6 @@
   line-height: 1.5;
 }
 
-
 /* BUTTON */
 
 .send-sos-button {
@@ -174,11 +173,11 @@
 
   padding: 16px;
 
-  background: #e63946;
+  background: #ef4444;
 
   color: white;
 
-  border: none;
+  border: 2px solid #dc2626;
 
   border-radius: 10px;
 
@@ -190,9 +189,8 @@
 }
 
 .send-sos-button:hover {
-  background: #ff4d5a;
+  background: #dc2626;
 }
-
 
 /* RESPONSIVE */
 
